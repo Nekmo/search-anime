@@ -57,7 +57,7 @@ class Crunchyroll:
             headers["Authorization"] = f"{self._authentication['token_type']} {self._authentication['access_token']}"
         return headers
 
-    async def search(self, query):
+    async def search(self, query: str):
         params = {
             "q": query,
             "n": 6,
